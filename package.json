@@ -1,0 +1,9 @@
+{
+  "name" : "LoginPage",
+  "version" : "1.0.0",
+  "script" : {
+    "start" : "LoginPage.html"
+  },
+  "author" : "STL",
+  "license" : "ICS"
+}

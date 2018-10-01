@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All day doctor login</title>
+</head>
+<body>
+<h2>Login</h2>
+
+<form>
+    User Name:<br>
+    <input type="email" name="userId" nhsPrescriptionId="userId">
+    <br>
+    Password:<br>
+    <input type="password" name="password" nhsPrescriptionId="password">
+    <br><br>
+    <input type="button" value="Submit" onclick="UserAction()">
+    <br>
+    <p nhsPrescriptionId="demo">
+</form>
+
+<script>
+    var state;
+    var redirectionUrl;
+
+    window.onload = function() {
+        var query = location.search.substr(1);
+        query.split("&").forEach(function(part) {
+          var item = part.split("=");
+          if(item[0] == "state") {
+            state = item[1];
+          }
+          if(item[0] == "redirect_url") {
+            redirectionUrl = item[1];
+          }
+        });
+    }
+
+    function UserAction() {
+       var xmlhttp = new XMLHttpRequest();
+       xmlhttp.onreadystatechange = function() {
+            console.log(this);
+            var obj = JSON.parse(this.responseText);
+            console.log("object",obj)
+            var auth_token = obj.data.user.auth_token
+            window.open("https://layla.amazon.com/spa/skill/account-linking-status.html?vendorId=M2X94TH1EYP0EE#state="+state+"&access_token="+auth_token+"&token_type=Bearer","_self");
+        }
+        xmlhttp.open("POST", "https://api.alldaydr.com/api/users/sign_in.json", true);
+        xmlhttp.setRequestHeader("Content-type", "application/json");
+        var email = document. getElementById("userId").value
+        var password = document. getElementById("password").value
+        var request_obj = {
+         user : {
+            email : email,
+            password : password
+         },
+         device_detail : {
+            device_type : 'web',
+            player_id : ''
+         }
+        };
+        xmlhttp.send(JSON.stringify(request_obj));
+    }
+
+
+</script>
+</body>
+</html>
