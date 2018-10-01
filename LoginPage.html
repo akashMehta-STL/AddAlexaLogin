@@ -43,7 +43,7 @@
             var obj = JSON.parse(this.responseText);
             console.log("object",obj)
             var auth_token = obj.data.user.auth_token
-            window.open("https://layla.amazon.com/spa/skill/account-linking-status.html?vendorId=M2X94TH1EYP0EE#state="+state+"&access_token="+auth_token+"&token_type=Bearer","_self");
+            window.open("https://layla.amazon.com/spa/skill/account-linking-status.html?vendorId=M1XY8BN54NSDAR#state="+state+"&access_token="+auth_token+"&token_type=Bearer","_self");
         }
         xmlhttp.open("POST", "https://api.alldaydr.com/api/users/sign_in.json", true);
         xmlhttp.setRequestHeader("Content-type", "application/json");
