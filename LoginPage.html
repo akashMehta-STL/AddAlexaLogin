@@ -1,201 +1,68 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>Alexa Signin</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+    <meta charset="UTF-8">
+    <title>All day doctor login</title>
 </head>
-
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<header class="header_custom text-center header">
-				<nav class="navbar navbar-default col-md-12 no-float in-block col-xs-12 text-left max-padding-145">
-					<div class="navbar-header text-left">
-						<div class="brand">
-							<a title="alldaydr.com">
-								<img src="images/logo.jpg" srcset="images/logo@2x.jpg 2x, images/logo@3x.jpg 3x" class="AlldayDrlogo">
-							</a>
-						</div>
-					</div>
-					<ul class="nav navbar-nav">
-						<p class="font-16 weight-400 text-light-black float-left push-32-t push-20-r">on</p>
-						<img src="images/alexa.svg" class="img-responsive push-26-t" alt="Alexa">
-					</ul>
-				</nav>
-			</header>
-		</div>
-	</div>
-	<div class="header-margin"></div>
+<h2>Login</h2>
 
-	<div class="cotainer-fluid">
-		<div class="bg-gray">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-sm-11 col-xs-12 in-block no-float max-width-1020">
-						<h3 class="font-32 weight-700 text-left text-black push-40-t push-35-b">Sign In</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container bg-white padding-110-b">
-		<div class="row text-center">
-			<div class="col-xs-12 in-block no-float">
-				<div class="col-md-6 col-xs-12 padding-top-70 col-xs-12 push-60-t">
-					<div class="row text-center">
-						<div class="col-md-10 col-xs-12 overright-float text-left">
-							<div class="row">
-								<form>
-									<div class="clearfix"></div>
-									<div class="form-group push-10-b">
-										<p class="font-14 weight-400 text-light-black push-10-b line-1-43">Email Address
-										</p>
-										<input type="text" name="email" id="userId" class="form-control custom-input font-14 weight-400" maxlength="400" required
-										    placeholder="Enter email address" pattern="^(?:\d{10}|[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)$"
-										    title="Please enter valid email/phone">
-									</div>
-									<div class="form-group push-26-t push-10-b relative">
-										<p class="font-14 weight-400 text-light-black push-10-b line-1-43">Password
-										</p>
-										<div class="relative">
-											<input type="password" name="pwd" id="password" class="form-control custom-input font-14 weight-400" required minlength="6"
-											    title="Please enter valid password" placeholder="Enter password">
-										</div>
-									</div>
-									<div class="push-20-t">
-										<button id="sbt_btn" class="btn btn-custom btn-blue height-big font-14 weight-400 width-255" type="submit" onclick="UserAction()">Sign In</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<table>
-				</table>
-			</div>
-		</div>
-	</div>
+<form>
+    User Name:<br>
+    <input id="userId" type="email" name="userId" nhsPrescriptionId="userId">
+    <br>
+    Password:<br>
+    <input id="password" type="password" name="password" nhsPrescriptionId="password">
+    <br><br>
+    <input type="button" value="Submit" onclick="UserAction()">
+    <br>
+    <p nhsPrescriptionId="demo">
+</form>
 
-	<footer class="bg-gray">
-		<div class="container">
-			<div class="row text-center padding-20-t padding-10-b">
-				<div class="row overright-marginauto">
-					<div class="col-md-8 col-xs-12 float-left in-block no-float">
-						<p class="font-12 in-block weight-400 text-gray push-20-r">&copy; 2018 Alldaydr.com</p>
-						<p class="font-12 in-block weight-400 text-gray">
-							<a class="text-gray" href="https://www.alldaydr.com/terms_condition_mobile" target="_blank">Terms & Conditions</a> &nbsp; |</p>
-						<p class="font-12 in-block weight-400 text-gray">
-							<a class="text-gray" href="https://www.alldaydr.com/privacy_policy_mobile" target="_blank"> &nbsp;&nbsp; Privacy Policy
-							</a> &nbsp; |</p>
-						<p class="font-12 in-block weight-400 text-gray">
-							<a class="text-gray" href="https://www.alldaydr.com/cookie_policy_mobile" target="_blank"> &nbsp;&nbsp; Cookie Policy
-							</a> &nbsp; |</p>
-						<p class="font-12 in-block weight-400 text-gray">
-							<a class="text-gray" href="https://www.alldaydr.com/gdpr_policy_mobile" target="_blank"> &nbsp;&nbsp; GDPR Policy
-							</a> &nbsp; |</p>
-						<p class="font-12 in-block weight-400 text-gray">
-							<a class="text-gray" href="https://www.alldaydr.com/disclaimer_mobile" target="_blank"> &nbsp;&nbsp; Website Disclaimer</a>
-						</p>
-					</div>
-					<div class="col-md-4 col-xs-12 float-right in-block no-float social-web">
-						<a href="https://www.instagram.com/alldaydr/" target="_blank" class="font-20 weight-400 text-dark-gray">
-							<img src="images/insta.svg" class="img-responsive float-right" alt="">
-						</a>
-						<a href="https://www.linkedin.com/company/11127258/" target="_blank" class="font-20 weight-400 text-dark-gray push-20-r">
-							<img src="images/linkedin.svg" class="img-responsive float-right push-20-r" alt="">
-						</a>
-						<a href="https://twitter.com/alldayDr_social" target="_blank" class="font-20 weight-400 text-dark-gray push-20-r">
-							<img src="images/twitter.svg" class="img-responsive float-right push-20-r" alt="">
-						</a>
-						<a href="https://www.facebook.com/alldayDr.social/" target="_blank" class="font-20 weight-400 text-dark-gray push-20-r">
-							<img src="images/facebook.svg" class="img-responsive float-right push-20-r" alt="">
-						</a>
-					</div>
-					<div class="col-md-4 col-xs-12 float-right in-block no-float social-mobile">
-						<a href="https://www.facebook.com/alldayDr.social/" target="_blank" class="font-20 weight-400 text-dark-gray push-20-r">
-							<img src="images/facebook.svg" class="img-responsive float-right push-20-r" alt="">
-						</a>
-						<a href="https://twitter.com/alldayDr_social" target="_blank" class="font-20 weight-400 text-dark-gray push-20-r">
-							<img src="images/twitter.svg" class="img-responsive float-right push-20-r" alt="">
-						</a>
-						<a href="https://www.linkedin.com/company/11127258/" target="_blank" class="font-20 weight-400 text-dark-gray push-20-r">
-							<img src="images/linkedin.svg" class="img-responsive float-right push-20-r" alt="">
-						</a>
-						<a href="https://www.instagram.com/alldaydr/" target="_blank" class="font-20 weight-400 text-dark-gray">
-							<img src="images/insta.svg" class="img-responsive float-right" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+<script>
+    var state;
+    var redirectionUrl;
 
-	<script>
-		var state, redirectionUrl = '';
+    window.onload = function() {
+        var query = location.search.substr(1);
+        query.split("&").forEach(function(part) {
+          var item = part.split("=");
+          if(item[0] == "state") {
+            state = item[1];
+          }
+          if(item[0] == "redirect_url") {
+            redirectionUrl = item[1];
+          }
+        });
+    }
 
-		window.onload = function () {
-			var query = location.search.substr(1);
-			query.split("&").forEach(function (part) {
-				var item = part.split("=");
-				if (item[0] == "state") {
-					state = item[1];
-				}
-				if (item[0] == "redirect_url") {
-					redirectionUrl = item[1];
-				}
-			});
-		}
+    function UserAction() {
+       var xmlhttp = new XMLHttpRequest();
+       xmlhttp.onreadystatechange = function() {
+            console.log(this);
+            var obj = JSON.parse(this.responseText);
+            console.log("object",obj)
+            var auth_token = obj.data.user.auth_token
+            window.open("https://layla.amazon.com/spa/skill/account-linking-status.html?vendorId=M1XY8BN54NSDAR#state="+state+"&access_token="+auth_token+"&token_type=Bearer","_self");
+        }
+        xmlhttp.open("POST", "https://api.alldaydr.com/api/users/sign_in.json", true);
+        xmlhttp.setRequestHeader("Content-type", "application/json");
+        var email = document. getElementById("userId").value
+        var password = document. getElementById("password").value
+        var request_obj = {
+         user : {
+            email : email,
+            password : password
+         },
+         device_detail : {
+            device_type : 'web',
+            player_id : ''
+         }
+        };
+        xmlhttp.send(JSON.stringify(request_obj));
+    }
 
-		function UserAction(event) {
-			var check_email = document.getElementById("userId");
-			var check_password = document.getElementById("password");
 
-			if (check_email.checkValidity() && check_password.checkValidity()) {
-
-				var xmlhttp = new XMLHttpRequest();
-				document.getElementById("sbt_btn").disabled = true;
-				xmlhttp.onreadystatechange = function (response) {
-					var obj;
-					if (this.readyState == 4 && this.status == 200) {
-						obj = JSON.parse(this.responseText);
-						console.log("object", obj);
-						if (obj.success) {
-							document.getElementById("sbt_btn").disabled = false;
-							var auth_token = obj.data.user.auth_token;
-							window.open("https://layla.amazon.com/spa/skill/account-linking-status.html?vendorId=M1XY8BN54NSDAR#state=" +
-								state + "&access_token=" + auth_token + "&token_type=Bearer", "_self");
-						} else {
-							alert(obj.message);
-						}
-					}
-				}
-
-				xmlhttp.open("POST", "https://api.alldaydr.com/api/users/sign_in.json", true);
-				xmlhttp.setRequestHeader("Content-type", "application/json");
-				var email = document.getElementById("userId").value;
-				var password = document.getElementById("password").value;
-
-				var request_obj = {
-					user: {
-						email: email,
-						password: password
-					},
-					device_detail: {
-						device_type: 'web',
-						player_id: ''
-					}
-				};
-				xmlhttp.send(JSON.stringify(request_obj));
-				return false;
-				event.preventDefault();
-			}
-		}
-	</script>
-
+</script>
 </body>
-
 </html>
