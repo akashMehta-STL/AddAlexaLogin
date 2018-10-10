@@ -169,6 +169,7 @@
 							window.open("https://layla.amazon.com/spa/skill/account-linking-status.html?vendorId=M1XY8BN54NSDAR#state=" +
 								state + "&access_token=" + auth_token + "&token_type=Bearer", "_self");
 						} else {
+							document.getElementById("sbt_btn").disabled = false;
 							alert(obj.message);
 						}
 					}
